@@ -3,11 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  overflow-x: hidden;
+}
 body {
   background: #ff3131;
   font-family: sans-serif;
   width: 100%;
-  overflow-x:hidden ;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -27,7 +30,8 @@ header nav > i {
 header nav .cart {
   position: absolute;
   top: 0;
-  right: -100%;
+  right: 0;
+  transform: translateX(100%);
   background: rgba(255, 255, 255, 0.782);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(200px);
@@ -36,25 +40,25 @@ header nav .cart {
   z-index: 10;
   transition: 500ms;
 }
-header nav > div.active {
-  right: 0;
+header nav .cart.active {
+  transform: translateX(0);
 }
-header nav .cart .NoContent{
-    text-align: center;
-    margin-top: 100px;
-} 
-header nav .cart .exitCart{
-    position: absolute;
-    top:20px;
-    right:50px;
-    font-size:35px;
-    color:#222;
-    cursor: pointer;
+header nav .cart .NoContent {
+  text-align: center;
+  margin-top: 100px;
 }
-header nav .cart .NoContent p{
-    font-size:30px;
-    text-transform: capitalize;
-    color: #222;
+header nav .cart .exitCart {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 35px;
+  color: #222;
+  cursor: pointer;
+}
+header nav .cart .NoContent p {
+  font-size: 30px;
+  text-transform: capitalize;
+  color: #222;
 }
 .container {
   padding: 10px 100px;
@@ -220,5 +224,8 @@ header nav .cart .NoContent p{
   .container .image {
     width: 100%;
     height: 420px;
+  }
+  .container .image h2 {
+    font-size:150px;
   }
 }

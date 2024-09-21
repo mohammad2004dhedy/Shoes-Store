@@ -19,7 +19,7 @@ let length = imgs.length;
 let container = document.querySelector(".container");
 
 // set the time out to pervent user from click prev or next buttons during animation
-let timeRunning = 1500;
+let timeRunning = 1000;
 let timeOutCounter;
 // create the pagination the same number as imgs slides
 let pagination = document.querySelector(".pagination");
